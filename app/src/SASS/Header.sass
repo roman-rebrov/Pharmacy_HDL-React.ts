@@ -1,0 +1,69 @@
+
+.flex 
+    display: flex
+    flex-direction: row
+.flx-center
+    display: flex
+    justify-content: center
+    align-items: center
+
+header
+    nav
+        a
+            color: white
+            text-decoration: none
+            font-size: .7em
+            margin-left: 1.2rem
+.App-header
+    @extend .flex
+    justify-content: space-between
+.cart
+    position: relative
+
+.cart-wrap
+    min-width: 5em
+    // cursor: pointer
+    font-size: 1rem
+    height: 100%
+    @extend .flx-center
+    // @extend .flex
+    justify-content: space-around
+    .icon
+        @extend .flx-center
+
+
+.cart-popup
+    position: absolute
+    // background-color: #b39268
+    background-color: #fff
+    color: #b9b9b9  
+    border: 1px solid white
+    right: 0
+    min-width: 5em
+// ---------------------------------
+.added-product
+    @extend .flex
+    justify-content: space-between
+    border-top: 1px solid #b9b9b9  
+    width: 10em
+.fast-view--name , .fast-view--cost
+    font-size: .9rem
+    color: #696969
+.fast-view-remove
+    cursor: pointer
+    color: black
+    &:hover
+        background-color: #799395
+        color: white
+.count-added-products
+    width: 1.2rem
+    height: 1.2rem
+    background-color: #b39268
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+// -----------------------------------
+.fa-cart-arrow-down
+    color: white
+    font-size: 1.2rem

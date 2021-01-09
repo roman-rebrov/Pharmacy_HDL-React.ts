@@ -1,0 +1,26 @@
+.flex
+    display: flex
+.Products
+    margin-left: 0.4em
+.product-card
+    width: 9em
+    height: 14em
+    border: 1px solid white
+    @extend .flex
+    flex-direction: column
+    justify-content: space-between
+    padding-bottom: .7em
+.product-name
+    font-size: 1rem
+    color: white
+    text-decoration: none
+.product-photo img
+    cursor: pointer
+    object-fit: contain
+    width: 100%
+    height: 100%
+.cost-wrap
+    @extend .flex
+    justify-content: space-between
+a
+    text-decoration: none
