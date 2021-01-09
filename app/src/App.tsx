@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 // import './App.css';
 import { BrowserRouter as Router,  } from 'react-router-dom'
 
@@ -8,11 +8,11 @@ import Footer from './Components/Footer/Footer'
 // import FooterContainer from './Components/Footer/FooterContainer'
 
 // ----
-import Store from './Redux/Store'
-import {State} from './Types/types'
+// import Store from './Redux/Store'
+// import {State} from './Types/types'
 // import './index.css';
-type inProps = {};
-interface inState {}
+// type inProps = {};
+// interface inState {}
 // ----
 const App : React.FC = ( ) => {
   return (

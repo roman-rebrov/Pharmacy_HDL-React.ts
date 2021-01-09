@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PayComponent = () => {
+const PayComponent : any = ()  : any=> {
     return (
         <div>
             Pay Component

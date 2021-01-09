@@ -41,7 +41,7 @@ const Header : React.FC<any> = (props) => {
                         setPopup(false)
                     }}
                 >
-                        <div className="cart-wrap">
+                        <div className="cart-wrap"> 
                             <div className="cart-total-cost">   
                                 {total(addedToCart)}
                             </div>
