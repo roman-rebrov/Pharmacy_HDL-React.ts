@@ -1,8 +1,8 @@
 import React from 'react'
 import '../../SASS/ProductList.sass'
 import ProdCardContainer from '../ProductCards/ProdCardsContainer'
-import { State } from '../../Types/types'
-import { Provider } from 'react-redux'
+// import { State } from '../../Types/types'
+// import { Provider } from 'react-redux'
 
 const ProductList : React.FC<any> = ( props ) => {
     // console.log(props);

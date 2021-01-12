@@ -1,8 +1,8 @@
-import React, { ButtonHTMLAttributes, useState } from 'react'
+import React, { useState } from 'react'
 import '../../SASS/ProductCard.sass'
 import { ProdObj } from '../../Types/types'
 import {Link} from 'react-router-dom'
-import { render } from '@testing-library/react'
+// import { render } from '@testing-library/react'
 import PhotoViewer from '../Modals/PhotoViewer'
  
 const ProductCard : React.FC<

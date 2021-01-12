@@ -4,15 +4,15 @@ import ProductCard from './ProductCard'
 import { ProdObj } from '../../Types/types'
 import {
     ADD_REMOVE_PRODUCT_IN_CART,
-    Adding_Action_Type
+    // Adding_Action_Type
 } from '../../Redux/Actions'
-import { render } from '@testing-library/react'
+// import { render } from '@testing-library/react'
 
-interface MapStateToProps {
-    added : string[],
-    products : {},
-    addedButton : string
-}
+// interface MapStateToProps {
+//     added : string[],
+//     products : {},
+//     addedButton : string
+// }
 
 const ProdCardsContainer : React.FC<{
     props : ProdObj, 

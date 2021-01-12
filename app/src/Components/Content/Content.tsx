@@ -5,7 +5,8 @@ import { Switch, Route } from 'react-router-dom'
 import { AboutContainer,
         ProdListContainer,
         ProductViewerContainer,
-        PayComponentContainer
+        PayComponentContainer,
+        SliderContainer,
     } from '../../Components'
 
 // import {ProductList, State } from '../../Types/types'
@@ -17,15 +18,15 @@ const Content : React.FC<any> = (props ) => {
         // e.preventDefault()
         // console.log(e.pageX,e.pageY);
         // props.eventPage(e.pageX,e.pageY);
-    // }
+    // };
 
     
     return ( 
         <div >
             <div className="block" >
             <Switch>
-                <Route exact path='/about' render={() =>  <AboutContainer/>}/>
-                <Route exact path='/' render={() => <ProdListContainer />} />
+                <Route exact path='/about' render={() =>  <AboutContainer/>} />
+                <Route exact path='/' render={() => [ <SliderContainer/>, <ProdListContainer /> ]} />
                 <Route exact path='/productViewer' render={() => <ProductViewerContainer />} />
                 <Route exact path='/payPage' render={() => <PayComponentContainer />} />
             </Switch>

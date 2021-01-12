@@ -49,7 +49,7 @@ const Header : React.FC<any> = (props) => {
                                 <i className="fas fa-cart-arrow-down"></i>
                             </div>
                             <div className= {"cart-added-length" && addedToCart.length > 0? 'count-added-products' : ''}>
-                                {addedToCart.length === 0 ? 'Корзина пуста' : addedToCart.length}
+                                {addedToCart.length === 0 ? <div>Корзина <br/> пуста</div> : addedToCart.length}
                             </div>
                         </div>
                         {
@@ -61,7 +61,7 @@ const Header : React.FC<any> = (props) => {
                                             <div style={{ border : '1px solid',
                                                 // backgroundColor: '#899e9d2',
                                                 fontSize: '1rem',
-                                                backgroundColor: '#899e9d',
+                                                backgroundColor: '#677070a4',
                                             }}>in cart</div>
                                         </div>
                                      :
@@ -95,13 +95,17 @@ const Header : React.FC<any> = (props) => {
                                             </div>
                                             <Link to='/payPage' style={{ 
                                                 border : '1px solid',
-                                                backgroundColor: '#3e6462',
+                                                backgroundColor: '#677070',
                                                 cursor : 'pointer',
                                                 color : 'white',
                                                 fontSize: '1rem',
                                                 display: 'block',
                                                 width: '100%'
-                                            }}>
+                                            }}
+                                                onClick={
+                                                   () => setPopup(false)
+                                                }
+                                            >
                                                 {/* <Link to='/productViewer'> */}
                                                     in cart
                                                 {/* </Link> */}
