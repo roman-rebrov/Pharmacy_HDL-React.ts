@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../../SASS/PayComponent.sass'
 
 const PayComponent : any = (props : any) => {
@@ -10,8 +11,10 @@ const PayComponent : any = (props : any) => {
     const event = (id : string) => {
         remove(id);
     };
+    const eventForView = (id : string) => {
+        props.viewer(id)
+    };
     console.log(props.addedToCart);
-    // console.log(total); 
     return (
         <div>
             Pay Component
@@ -20,9 +23,11 @@ const PayComponent : any = (props : any) => {
                     { 
                         props.addedToCart.map((el : any , i : number) => (
                             <div key={el.id + i} className="order-objects_item">
-                                <div className="">
-                                    {el.name}
-                                </div>
+                                <Link to='/productViewer' onClick={()=> {eventForView(el.id)}}>
+                                    <div className="">
+                                        {el.name}
+                                    </div>
+                                </Link>
                                 <div className="">
                                     {el.cost}
                                 </div>

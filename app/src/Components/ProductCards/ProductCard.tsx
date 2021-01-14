@@ -18,7 +18,6 @@ const ProductCard : React.FC<
         dispatch : any
     }
     )  => {
-        console.log();
         
     let [modal, setModal]  = useState(false)
     let [button, setButton] = React.useState(addedButton);
@@ -47,7 +46,7 @@ const ProductCard : React.FC<
     };
     
         return (
-            <div className='Products'>
+            <div className='Products'> 
             <div className="product-card">
                 <Link to='/productViewer' onClick={()=> {event(products.id)}}>
                     <div className="product-name">

@@ -1,3 +1,5 @@
+
+
 .flex 
     display: flex
     flex-direction: row
@@ -8,6 +10,11 @@
         @extend .flex
         width: 70%
         justify-content: space-between
+        a
+            color: white
+            font-size: .8em
+            &:hover
+                text-decoration: underline 
 
     &-btn-remove
         cursor: pointer

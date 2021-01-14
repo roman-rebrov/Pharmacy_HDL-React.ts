@@ -10,8 +10,11 @@ const PayComponentContainer : React.FC = ()  => {
         type: ADD_REMOVE_PRODUCT_IN_CART, 
         payload: id
     });
-
-    const mapStateToProps = (state : any) => {
+    const viewerActionCreator = (id : string) => ({
+            type : "SELECTED_FOR_VIEWING",
+            payload : id,
+    });
+    const mapStateToProps = (state : any) => { 
         let total : number = 0;
         state.addedToCartReducer.added.forEach((element : any) => {
             // console.log(element.cost);
@@ -24,6 +27,9 @@ const PayComponentContainer : React.FC = ()  => {
     };
     const mapDispatchToProps = (dispatch : any) => {
         return({
+            viewer : (id : string) => {
+                dispatch(viewerActionCreator(id))
+            },
             remove : (id : string) => { 
                 dispatch(removeActionCreator(id));
             },

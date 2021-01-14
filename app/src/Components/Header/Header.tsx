@@ -23,7 +23,7 @@ const Header : React.FC<any> = (props) => {
         addRemove(id);
     }
     return (
-        <div>
+        <div className='header-main-container'>
             <header className="App-header block" >
                 <nav>
                     <Link  to='/'>
