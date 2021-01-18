@@ -16,7 +16,7 @@ const PayComponentContainer : React.FC = ()  => {
     });
     const mapStateToProps = (state : any) => { 
         let total : number = 0;
-        state.addedToCartReducer.added.forEach((element : any) => {
+        state.addedToCartReducer.added.forEach((element : any) => { 
             // console.log(element.cost);
             total += element.cost;
         });
