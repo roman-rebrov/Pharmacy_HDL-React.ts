@@ -27,7 +27,7 @@ const Content : React.FC<any> = (props ) => {
             <div className="content-child-container  block" >
                 <Switch>
                     <Route exact path='/about' render={() =>  <AboutContainer/>} />
-                    <Route exact path='/' render={() => [ <SliderContainer/>, <ProdListContainer /> ]} />
+                    <Route exact path='/' render={() => [ <SliderContainer/>,  <ProdListContainer /> ]} />
                     <Route exact path='/productViewer' render={() => <ProductViewerContainer />} />
                     <Route exact path='/payPage' render={() => <PayComponentContainer />} />
                 </Switch>

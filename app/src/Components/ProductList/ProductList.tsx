@@ -12,7 +12,7 @@ const ProductList : React.FC<any> = ( props ) => {
             Our Products :
             <div className="product-list">
                 {
-                    props.Products.list.map((item : any, i : number) : JSX.Element => { 
+                    props.Products.list.map((item : any,  i : number)  :  JSX.Element => { 
                         return (
                             <ProdCardContainer  
                                 props={item}
