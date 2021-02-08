@@ -7,7 +7,7 @@ import { AboutContainer,
         ProdListContainer,
         ProductViewerContainer,
         PayComponentContainer,
-        SliderContainer,
+        SliderContainer, 
     } from '../../Components'
 
 // import {ProductList, State } from '../../Types/types'

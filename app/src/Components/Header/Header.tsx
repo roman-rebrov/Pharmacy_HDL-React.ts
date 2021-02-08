@@ -54,8 +54,10 @@ const Header : React.FC<any> = (props) => {
                         </div>
                         {
                             popup &&
-                            <div className="cart-popup">
-                                {addedToCart.length === 0 && 'пусто'} <br/>
+                            <div className="cart-popup" style={{
+                                        fontSize: "1rem"
+                                    }}>
+                                {addedToCart.length === 0 && 'выберите товар'} <br/>
                                 {addedToCart.length === 0 ? 
                                         <div className="">
                                             <div style={{ border : '1px solid',

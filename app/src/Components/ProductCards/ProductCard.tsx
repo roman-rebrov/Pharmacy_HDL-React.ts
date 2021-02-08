@@ -4,35 +4,48 @@ import { ProdObj } from '../../Types/types'
 import {Link} from 'react-router-dom'
 // import { render } from '@testing-library/react'
 import PhotoViewer from '../Modals/PhotoViewer'
+
+import { getProducts } from '../../API/products'
  
+
+
 const ProductCard : React.FC<
     {products : ProdObj, 
     addedButton : string,
     addedProductFunction : (id : string) => void,
     dispatch : any
 }
-> = (
-        {products, addedButton, addedProductFunction, dispatch} : {
-        addedButton : string,
-        products : ProdObj, addedProductFunction : (id : string) => void,
-        dispatch : any
-    }
+> =  (
+    //     {products, addedButton, addedProductFunction, dispatch} : {
+    //     addedButton : string,
+    //     products : ProdObj, addedProductFunction : (id : string) => void,
+    //     dispatch : any,
+    // }, 
+        props
     )  => {
-        
+        // console.log(props);
+    let  {products, addedButton, addedProductFunction, dispatch} : {
+            addedButton : string,
+            products : ProdObj, addedProductFunction : (id : string) => void,
+            dispatch : any,
+        }  =  props;
     let [modal, setModal]  = useState(false)
     let [button, setButton] = React.useState(addedButton);
 
     const event = (id : string) => {
         // debugger
-        console.log(id);
+        // console.log(id);
         const action = {
             type : "SELECTED_FOR_VIEWING",
             payload : id,
         }
         dispatch(action)
     };
-    const openModal = () => {
-        setModal(true)
+    const openModal = async() => {
+        setModal(true);
+        const ttt = await getProducts()
+        await console.log(ttt);
+        
     };
     const close = () => {
         setModal(false)

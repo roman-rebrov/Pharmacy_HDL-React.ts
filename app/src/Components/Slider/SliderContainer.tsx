@@ -6,7 +6,6 @@ import '../../SASS/slider.sass'
 
 const SliderContainer = () => {
 
-
     const mapStateToProps = (state : any) => {
         return({
 

@@ -12,7 +12,7 @@ import Footer from './Components/Footer/Footer'
 // import {State} from './Types/types'
 // import './index.css';
 // type inProps = {};
-// interface inState {}
+// interface inState {} 
 // ----
 const App : React.FC = ( ) => {
   return (

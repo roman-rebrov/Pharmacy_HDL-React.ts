@@ -6,6 +6,7 @@ import {
     ADD_REMOVE_PRODUCT_IN_CART,
     // Adding_Action_Type
 } from '../../Redux/Actions'
+import { withRouter } from 'react-router'
 // import { render } from '@testing-library/react'
 
 // interface MapStateToProps {
@@ -43,8 +44,9 @@ const ProdCardsContainer : React.FC<{
     const mapDispatchToProps = {
         dispatch
     };
-    const ProductCardWrap = connect(mapStateToProps,mapDispatchToProps)(ProductCard)
-    return(<ProductCardWrap/>)
+    const ProductCardWrap = connect(mapStateToProps,mapDispatchToProps)(ProductCard);
+    const ProductCardWrapWithRouter = withRouter(ProductCardWrap);
+    return(<ProductCardWrapWithRouter/>);
 };
 
 export default ProdCardsContainer;
